@@ -1,0 +1,11 @@
+from microbit import*
+import radio
+
+radio.on()
+radio.config(channel=16)
+
+# Recieving Message
+while True:
+    msg=radio.receive()
+    if msg:
+        display.scroll(msg)
